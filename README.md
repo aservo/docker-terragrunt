@@ -8,6 +8,10 @@ This Docker image contains the following primary binaries:
 * `terraform`
 * `terragrunt`
 
+Terraform version compatibility table:
+
+* https://terragrunt.gruntwork.io/docs/getting-started/supported-terraform-versions/
+
 ## Example:
 
 ```

@@ -4,7 +4,7 @@ FROM hashicorp/terraform:1.1.9
 RUN apk add --no-cache bash make
 
 ## Install Terragrunt
-ARG TERRAGRUNT_VERSION=0.36.8
+ARG TERRAGRUNT_VERSION=0.36.10
 RUN wget "https://github.com/gruntwork-io/terragrunt/releases/download/v${TERRAGRUNT_VERSION}/terragrunt_linux_amd64" -O /usr/local/bin/terragrunt --no-verbose \
     && chmod +x /usr/local/bin/terragrunt
 

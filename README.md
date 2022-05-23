@@ -12,6 +12,11 @@ Terraform version compatibility table:
 
 * https://terragrunt.gruntwork.io/docs/getting-started/supported-terraform-versions/
 
+Furthermore, this Docker image contains the following secondary binaries:
+
+* `make`
+* `psql` (Postgresql CLI)
+
 ## Example:
 
 ```
@@ -29,4 +34,28 @@ jobs:
       run: | 
         terraform version
         terragrunt version
+```
+
+## Development
+
+Build image:
+
+```
+docker build .
+...
+Successfully built a123b4c567de 
+```
+
+Run image:
+
+```
+$ docker run -it a123b4c567de bash
+bash-5.1#
+```
+
+Execute commands inside the container:
+
+```
+bash-5.1# terragrunt -v
+terragrunt version v0.36.12
 ```

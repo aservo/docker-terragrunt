@@ -5,8 +5,8 @@ Terragrunt
 
 This Docker image contains the following primary binaries:
 
-* `terraform`
-* `terragrunt`
+* [`terraform`](https://github.com/hashicorp/terraform/releases)
+* [`terragrunt`](https://github.com/gruntwork-io/terragrunt/releases)
 
 Terraform version compatibility table:
 
@@ -57,5 +57,5 @@ Execute commands inside the container:
 
 ```
 bash-5.1# terragrunt -v
-terragrunt version v0.36.12
+terragrunt version vX.Y.Z
 ```

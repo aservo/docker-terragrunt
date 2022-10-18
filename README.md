@@ -38,6 +38,20 @@ jobs:
 
 ## Development
 
+Clone the repo by running the following command:
+
+```
+https://github.com/aservo/docker-terragrunt.git
+
+```
+
+Move to the folder containing DockerFile:
+
+```
+cd docker-terragrunt
+
+```
+
 Build image:
 
 ```

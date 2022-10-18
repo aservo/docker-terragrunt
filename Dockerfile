@@ -1,7 +1,11 @@
 FROM hashicorp/terraform:1.2.7
 
 ## Install packages
-RUN apk add --no-cache bash make postgresql
+RUN apk add --no-cache \
+    ansible \
+    bash \
+    make \
+    postgresql
 
 ## Install Terragrunt
 ARG TERRAGRUNT_VERSION=0.38.7

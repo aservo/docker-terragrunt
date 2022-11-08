@@ -1,4 +1,4 @@
-FROM hashicorp/terraform:1.2.9
+FROM hashicorp/terraform:1.3.4
 
 ## Install packages
 RUN apk add --no-cache \
@@ -8,7 +8,7 @@ RUN apk add --no-cache \
     postgresql
 
 ## Install Terragrunt
-ARG TERRAGRUNT_VERSION=0.38.12
+ARG TERRAGRUNT_VERSION=0.40.0
 RUN wget "https://github.com/gruntwork-io/terragrunt/releases/download/v${TERRAGRUNT_VERSION}/terragrunt_linux_amd64" -O /usr/local/bin/terragrunt --no-verbose \
     && chmod +x /usr/local/bin/terragrunt
 

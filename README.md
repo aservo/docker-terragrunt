@@ -14,6 +14,7 @@ Terraform version compatibility table:
 
 Furthermore, this Docker image contains the following secondary binaries:
 
+* `az` (Azure CLI)
 * `make`
 * `psql` (Postgresql CLI)
 
@@ -31,22 +32,17 @@ jobs:
       image: ghcr.io/aservo/terragrunt:latest
     steps:
     - name: Versions
-      run: | 
+      run: |
         terraform version
         terragrunt version
 ```
 
 ## Development
 
-Clone the repo by running the following command:
+Clone the repo and change to the directory with the following commands:
 
 ```
 git clone https://github.com/aservo/docker-terragrunt.git
-```
-
-Move to the folder containing DockerFile:
-
-```
 cd docker-terragrunt
 ```
 
@@ -55,7 +51,7 @@ Build image:
 ```
 docker build .
 ...
-Successfully built a123b4c567de 
+Successfully built a123b4c567de
 ```
 
 Run image:

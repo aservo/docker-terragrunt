@@ -1,4 +1,4 @@
-FROM hashicorp/terraform:1.3.4
+FROM hashicorp/terraform:1.3.6
 
 ## Install packages
 RUN apk add --no-cache \
@@ -19,7 +19,7 @@ RUN pip install --upgrade pip \
     && pip install -Iv azure-cli==${AZ_VERSION}
 
 ## Install Terragrunt
-ARG TERRAGRUNT_VERSION=0.40.2
+ARG TERRAGRUNT_VERSION=0.42.5
 RUN wget "https://github.com/gruntwork-io/terragrunt/releases/download/v${TERRAGRUNT_VERSION}/terragrunt_linux_amd64" -O /usr/local/bin/terragrunt --no-verbose \
     && chmod +x /usr/local/bin/terragrunt
 

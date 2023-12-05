@@ -32,10 +32,13 @@ RUN apk add --no-cache \
     libffi-dev \
     make \
     musl-dev \
+    nodejs \
     openssl-dev \
     postgresql \
     py3-pip \
-    python3-dev
+    python3-dev \
+    shadow \
+    sudo
 
 ARG AZ_VERSION
 
@@ -50,6 +53,10 @@ RUN wget "https://github.com/gruntwork-io/terragrunt/releases/download/v${TERRAG
     && chmod +x /usr/local/bin/terragrunt
 
 USER ${USER}
+
+## Set label for Azure DevOps Pipelines
+
+LABEL "com.azure.dev.pipelines.agent.handler.node.path"="/usr/bin/node"
 
 ## Adjust WORKDIR and remove ENTRYPOINT FROM base image
 
